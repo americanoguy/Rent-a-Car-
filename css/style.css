@@ -347,6 +347,31 @@ button{
 .formimg img{
     width: 100%;
 }
+.questions{
+    display: grid;
+    width: fit-content;
+    margin: auto;
+    grid-template-columns: 1fr;
+}
+.questions h2{
+    font-size: 3em;
+    text-align: center;
+    color: orangered;
+}
+.boxq{
+    margin: auto;
+    border-left: 5px solid orangered;
+    margin-bottom: 2vh;
+    box-shadow: 0 0 10px grey;
+    border-radius: 10px;
+    width: 80vw;
+    padding: 2vw;
+    font-size: 1em;
+    transition: all 0.5s linear;
+}
+.boxq:hover{
+    transform: scale(1.02);
+}
 
 
 @media (max-width:1200px) {
@@ -383,6 +408,10 @@ button{
       .formpart{
     grid-template-columns: repeat(2,1fr);
     font-size: 0.7em;
+}
+.questions h2{
+    font-size: 2.5em;
+    margin-bottom: 2vh;
 }
 }
 @media (max-width:992px){
@@ -437,6 +466,10 @@ button{
     .formpart{
     grid-template-columns: repeat(2,1fr);
     font-size: 0.7em;
+}
+.questions h2{
+    font-size: 2.5em;
+    margin-bottom: 2vh;
 }
 
 }
@@ -539,6 +572,10 @@ button{
     grid-template-columns: repeat(2,1fr);
     font-size: 0.5em;
 }
+.questions h2{
+    font-size: 2em;
+    margin-bottom: 2vh;
+}
 }
 @media (max-width:715px){
      nav .container a img{
@@ -631,6 +668,10 @@ button{
     .formpart{
     grid-template-columns: repeat(2,1fr);
     font-size: 0.5em;
+}
+.questions h2{
+    font-size: 1.5em;
+    margin-bottom: 2vh;
 }
 }
 @media (max-width:580px){
@@ -725,6 +766,10 @@ button{
     .formpart{
     grid-template-columns: repeat(2,1fr);
     font-size: 0.5em;
+}
+.questions h2{
+    font-size: 1.5em;
+    margin-bottom: 2vh;
 }
 }
 @media (max-width:426px){
@@ -829,6 +874,10 @@ button{
     width: 30vw;
     font-size: 1.5em;
 }
+.questions h2{
+    font-size: 1em;
+    margin-bottom: 2vh;
+}
 }
 @media(max-width:376px){
     nav .container a img{
@@ -927,6 +976,10 @@ button{
     grid-template-columns: 1fr;
     font-size: 0.5em;
 }
+.questions h2{
+    font-size: 1em;
+    margin-bottom: 2vh;
+}
 }
 @media (max-width:320px){
     nav .container a img{
@@ -1018,5 +1071,8 @@ button{
 .formpart{
     grid-template-columns: 1fr;
     font-size: 0.5em;
+}
+.questions h2{
+    font-size: 1em;
 }
 }
