@@ -6,12 +6,19 @@
     font-family: poppinsregular;
     
 }
+body{
+    overflow-x: hidden;
+}
 @font-face {
     font-family: poppinsregular;
     src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
 header{
     background-color: grey;
+}
+nav .container{
+    background-color: rgb(55, 55, 55);
+    height: 9vh;
 }
 .container{
     width: 80vw;
@@ -20,16 +27,16 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.links{
+nav .container .links{
     display: flex;
     gap: 2vw;
 }
-.links a{
+nav .container .links a{
    display: flex;
-    color: black;
+    color: white;
     transition: all 0.5s linear;
 }
-.links a:hover{
+nav .container .links a:hover{
     color: orangered;
 }
 .registerbutton{
@@ -39,12 +46,18 @@ header{
     width: 450px;
 }
 nav{
-    padding-top:2vh ;
+    background-color:rgb(55, 55, 55);
+    z-index: 99;
+    width: 100%;
+    margin-bottom: 2vh;
+    height: 9vh;
+    position: fixed;
 }
 .products .container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2vw;
+    padding-top: 5vh;
     text-align: center;
 }
 .products h2{
@@ -432,6 +445,7 @@ footer .column1 img{
     .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 2.5em;
@@ -518,6 +532,7 @@ footer .column1{
     .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 2.5em;
@@ -614,15 +629,39 @@ footer .column1{
      nav .container a img{
         width: 20vw;
     }
-     nav .container .links{
-        display: none;
+    #rclogo{
+        width: 15vw;
     }
-    nav .registerbutton{
-        display:  block;
+    @media (max-width:768px){
+    nav .container .links {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 9vh;
+        align-items: center;
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(55,55,55);
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
     }
+
+    nav .container .links.show {
+        right: 0;
+    }
+
+    nav .registerbutton {
+        display: block;
+        cursor: pointer;
+    }
+}
+
     .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 2.5em;
@@ -764,8 +803,22 @@ footer .column1{
      nav .container a img{
         width: 20vw;
     }
-      nav .container .links{
-        display: none;
+     nav .container .links {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 9vh;
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(55,55,55);
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav .container .links.show {
+        right: 0;
     }
     nav .registerbutton{
         display:  block;
@@ -773,6 +826,7 @@ footer .column1{
      .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 2em;
@@ -907,8 +961,22 @@ footer .column1{
      nav .container a img{
         width: 25vw;
     }
-      nav .container .links{
-        display: none;
+      nav .container .links {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 9vh;
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(55,55,55);
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav .container .links.show {
+        right: 0;
     }
     nav .registerbutton{
         display:  block;
@@ -916,6 +984,7 @@ footer .column1{
      .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 2em;
@@ -1051,8 +1120,22 @@ footer .column1{
      nav .container a img{
         width: 25vw;
     }
-      nav .container .links{
-        display: none;
+       nav .container .links {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 9vh;
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(55,55,55);
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav .container .links.show {
+        right: 0;
     }
     nav .registerbutton{
         display:  block;
@@ -1060,6 +1143,7 @@ footer .column1{
      .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 1.2em;
@@ -1204,8 +1288,23 @@ footer .column1{
     nav .container a img{
         width: 25vw;
     }
-    nav .container .links{
-        display: none;
+     nav .container .links {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 9vh;
+        align-items: center;
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(55,55,55);
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav .container .links.show {
+        right: 0;
     }
     nav .registerbutton{
         display:  block;
@@ -1213,6 +1312,7 @@ footer .column1{
     .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 1em;
@@ -1352,8 +1452,23 @@ footer .column1{
     nav .container a img{
         width: 30vw;
     }
-    nav .container .links{
-        display: none;
+     nav .container .links {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 9vh;
+        align-items: center;
+        width: 50vw;
+        height: 100%;
+        background-color: rgb(55,55,55);
+        gap: 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    nav .container .links.show {
+        right: 0;
     }
     nav .container .registerbutton{
         display: block;
@@ -1361,6 +1476,7 @@ footer .column1{
     .products .container{
         grid-template-columns: repeat(2,1fr);
         padding-bottom: 3vh;
+        padding-top: 10vh;
     }
     .products .container h2{
         font-size: 1em;
