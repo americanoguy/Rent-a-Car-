@@ -1,14 +1,14 @@
 AOS.init();
 
-// const age = confirm("Are you 18 or older?")
+const age = confirm("Are you 18 or older?")
 
 
-// if(age){
-//     const audio = new Audio("audio/car-engine-roaring-376881.mp3");
-//     audio.play()
-// }else{
-//     window.open("https://www.google.com/");
-// }
+if(age){
+    const audio = new Audio("audio/car-engine-roaring-376881.mp3");
+    audio.play()
+}else{
+    window.open("https://www.google.com/");
+}
 
 
 
